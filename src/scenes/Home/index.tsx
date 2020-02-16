@@ -1,11 +1,19 @@
 import React from 'react'
-import { Text } from 'react-native'
-import { homeStyles as styles } from './styles'
+import { Image, Text, SafeAreaView, View } from 'react-native'
+import { styles } from './styles'
+import userAvatar from 'src/assets/userAvatar.png'
 
 export default function home() {
   return (
     <>
-      <Text style={styles.header}>Sample App</Text>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.form}>
+          <View style={styles.userAvatarContainer}>
+            <Image source={userAvatar} style={styles.userAvatar} />
+          </View>
+          <Text>Sample App</Text>
+        </View>
+      </SafeAreaView>
     </>
   )
 }
