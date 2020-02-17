@@ -1,39 +1,57 @@
 import { StyleSheet } from 'react-native'
 import { Colors } from 'src/scenes/styles/Colors'
-import { normalizedWidth, normalizedHeight } from 'src/scenes/styles/scale'
+import {
+  normalizedWidth,
+  normalizedHeight,
+  normalizedFontSize,
+} from 'src/scenes/styles/scale'
 
 export const styles = StyleSheet.create({
   container: {
+    alignItems: 'stretch',
     backgroundColor: Colors.background,
     color: Colors.background,
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'stretch',
   },
   form: {
+    alignItems: 'flex-start',
     backgroundColor: Colors.white,
+    borderRadius: 8,
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 8,
+    justifyContent: 'flex-start',
     marginHorizontal: normalizedWidth(16),
     marginVertical: normalizedHeight(35),
+    paddingHorizontal: normalizedWidth(16),
+  },
+  formTextBar: {
+    backgroundColor: Colors.background,
+    height: normalizedHeight(1),
+  },
+  formTextField: {
+    fontSize: normalizedFontSize(15),
+    height: normalizedHeight(35),
+    textAlign: 'left',
   },
   userAvatar: {
     borderRadius: 100,
-    width: normalizedWidth(80),
     height: normalizedWidth(80),
+    width: normalizedWidth(80),
   },
   userAvatarContainer: {
+    alignItems: 'center',
+    alignSelf: 'center',
     backgroundColor: 'black',
     borderRadius: 100,
-    width: normalizedWidth(90),
-    height: normalizedWidth(90),
     flexDirection: 'column',
+    height: normalizedWidth(90),
     justifyContent: 'center',
-    alignItems: 'center',
-    transform: [{ translateY: -normalizedHeight(210) }],
+    transform: [{ translateY: -normalizedHeight(30) }],
+    width: normalizedWidth(90),
+  },
+  formTextFieldContainer: {
+    width: normalizedWidth(190),
   },
 })

@@ -1,7 +1,9 @@
 import React from 'react'
-import { Image, Text, SafeAreaView, View } from 'react-native'
-import { styles } from './styles'
+import { Image, SafeAreaView, View } from 'react-native'
 import userAvatar from 'src/assets/userAvatar.png'
+import { TextFormField } from 'src/scenes/Home/Fields/TextFormField'
+import { strings } from 'src/scenes/Home/strings'
+import { styles } from './styles'
 
 export default function home() {
   return (
@@ -11,7 +13,9 @@ export default function home() {
           <View style={styles.userAvatarContainer}>
             <Image source={userAvatar} style={styles.userAvatar} />
           </View>
-          <Text>Sample App</Text>
+          <TextFormField placeholder={strings.name} />
+          <TextFormField placeholder={strings.email} />
+          <TextFormField placeholder={strings.password} />
         </View>
       </SafeAreaView>
     </>
