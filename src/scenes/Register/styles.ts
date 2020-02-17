@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginHorizontal: normalizedWidth(16),
     marginVertical: normalizedHeight(35),
+    paddingBottom: normalizedWidth(16),
     paddingHorizontal: normalizedWidth(16),
   },
   formTextBar: {
