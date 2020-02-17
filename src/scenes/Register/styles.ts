@@ -7,9 +7,14 @@ import {
 } from 'src/scenes/styles/scale'
 
 export const styles = StyleSheet.create({
+  background: {
+    height: '100%',
+    position: 'absolute',
+    width: '100%',
+    zIndex: -1,
+  },
   container: {
     alignItems: 'stretch',
-    backgroundColor: Colors.background,
     color: Colors.background,
     flex: 1,
     flexDirection: 'column',
